@@ -1,0 +1,37 @@
+var diaml=0;
+
+function setup() {
+    createCanvas(500,500);
+    background("#c07f66");
+  // put setup code here
+}
+
+function draw() {
+    background("#0a33f6");
+    fill("#afd8a7");
+    stroke("#aaff00");
+    strokeWeight(5);
+    ellipse(150,50,15,30,)
+    fill("#bb2200");
+    ellipse(250,100,20,20);
+    textSize(25);
+    textFont("Times New Roman");
+    textStyle(BOLD);
+    textAlign(RIGHT);
+    text("Whats Good?");
+    ellipse(mouseX,mouseY,30,24);
+    ellipse(50,125,diaml,diaml);
+    diaml=diaml+5;
+    ellipse(random(width),random(height),25,25);
+    console.log(diaml);
+  // put drawing code here
+}
+
+function mousePressed(){
+    diaml-diaml+5;
+    if(diaml>50){
+        diaml=0;
+    }else{
+    diaml=diaml+5;
+    }
+}
